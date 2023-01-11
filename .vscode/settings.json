@@ -8,7 +8,7 @@
         "-DGMP_INCLUDE_DIR=D:/Program Files/gmp/include",
         "-DMPFR_LIBRARIES=D:/Program Files/gmp/lib/libmpfr-4.lib",
         "-DMPFR_INCLUDE_DIR=D:/Program Files/gmp/include",
-        "-DBoost_INCLUDE_DIR=D:/Program Files/boost_1_81_0",
+        "-DBoost_INCLUDE_DIR=D:/Program Files/boost_1_80_0",
         "-DEIGEN3_INCLUDE_DIR=D:/Program Files/Eigen3",
         "-DDEBUG_ARGUES=--gtest_filter="
     ],

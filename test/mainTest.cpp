@@ -4,3 +4,8 @@ TEST(testCGAL, a_Line_Intersect)
 {
 	a_test_line_intersect();
 }
+
+TEST(testCGAL, miniqtproject)
+{
+	miniqtproject();
+}

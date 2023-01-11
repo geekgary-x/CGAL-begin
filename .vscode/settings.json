@@ -14,6 +14,6 @@
     ],
     // "cmake.generator": "Ninja",
     "cmake.debugConfig": {
-        "args": ["--gtest_filter="]
+        "args": ["--gtest_filter=testCGAL.a_Line_Intersect"]
     }
 }

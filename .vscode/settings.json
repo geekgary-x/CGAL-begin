@@ -2,13 +2,12 @@
     "cmake.configureOnEdit": false,
     "cmake.configureArgs" : [
         "-DCMAKE_PREFIX_PATH=D:/softwares/Qt/5.15.2/msvc2015_64",
-        "-DCMAKE_BUILD_TYPE=Debug",
         "-DCGAL_DIR=D:/Program Files/CGAL-5.5.1",
         "-DGMP_LIBRARIES=D:/Program Files/gmp/lib/libgmp-10.lib",
         "-DGMP_INCLUDE_DIR=D:/Program Files/gmp/include",
         "-DMPFR_LIBRARIES=D:/Program Files/gmp/lib/libmpfr-4.lib",
         "-DMPFR_INCLUDE_DIR=D:/Program Files/gmp/include",
-        "-DBoost_INCLUDE_DIR=D:/Program Files/boost_1_80_0",
+        "-DBoost_INCLUDE_DIR=D:/Program Files/boost_1_81_0",
         "-DEIGEN3_INCLUDE_DIR=D:/Program Files/Eigen3",
         "-DDEBUG_ARGUES=--gtest_filter="
     ],

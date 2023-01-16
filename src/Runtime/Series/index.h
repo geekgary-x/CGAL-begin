@@ -10,4 +10,6 @@ int predicates_and_constructions();
 
 int surprising();
 
+int exact();
+
 int miniqtproject();

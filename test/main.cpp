@@ -10,6 +10,11 @@ TEST(CGALBEGIN, surprising)
 	surprising();
 }
 
+TEST(CGALBEGIN, exact)
+{
+	exact();
+}
+
 TEST(CGALBEGIN, miniqtproject)
 {
 	miniqtproject();

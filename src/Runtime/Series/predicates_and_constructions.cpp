@@ -1,4 +1,10 @@
-#include "index.h"
+/*****************************************************************//**
+ * \file   predicates_and_constructions.cpp
+ * \brief  判断和构造
+ * 
+ * \author StoneHappy
+ * \date   January 2023
+ *********************************************************************/
 #include <CGAL/Simple_cartesian.h>
 
 typedef CGAL::Simple_cartesian<double> Kernel;
@@ -7,9 +13,9 @@ typedef Kernel::Segment_2 Segment_2;
 /**
  * \brief 谓语与构造  
  * 
- * 谓语是一些离散的结果，如是否判断是否共线，点的方向。
+ * 判断主要用于比较和分类，其计算返回值是布尔类型或是枚举类型
  * 
- * 构造返回一个值或其他几何实体
+ * 构造则是要利用算法在现有几何对象的基础上产生新的几何对象
  * 
  * \return 
  */

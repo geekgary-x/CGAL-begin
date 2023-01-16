@@ -1,3 +1,10 @@
+/*****************************************************************//**
+ * \file   miniqt_project.cpp
+ * \brief  最简单CGAL Qt项目
+ * 
+ * \author StoneHappy
+ * \date   January 2023
+ *********************************************************************/
 #include <CGAL/Simple_cartesian.h>
 #include <CGAL/Surface_mesh.h>
 #include <CGAL/draw_surface_mesh.h>

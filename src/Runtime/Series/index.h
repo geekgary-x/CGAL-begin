@@ -1,6 +1,6 @@
 /*****************************************************************//**
  * \file   index.h
- * \brief  learning CGAL examples
+ * \brief  Ñ§Ï°CGAL°¸ÁÐ
  * 
  * \author StoneHappy
  * \date   January 2023

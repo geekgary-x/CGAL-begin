@@ -4,7 +4,16 @@
 typedef CGAL::Simple_cartesian<double> Kernel;
 typedef Kernel::Point_2 Point_2;
 typedef Kernel::Segment_2 Segment_2;
-int b_predicates_and_constructions()
+/**
+ * \brief 谓语与构造  
+ * 
+ * 谓语是一些离散的结果，如是否判断是否共线，点的方向。
+ * 
+ * 构造返回一个值或其他几何实体
+ * 
+ * \return 
+ */
+int predicates_and_constructions()
 {
 	Point_2 p(1, 1), q(10, 10);
 	std::cout << "p = " << p << std::endl;

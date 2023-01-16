@@ -1,4 +1,6 @@
 {
+    "files.autoGuessEncoding": true,
+
     "cmake.configureOnEdit": false,
     "cmake.configureArgs" : [
         "-DCMAKE_PREFIX_PATH=D:/softwares/Qt/5.15.2/msvc2015_64",

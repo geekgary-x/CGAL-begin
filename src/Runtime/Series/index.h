@@ -1,6 +1,13 @@
+/*****************************************************************//**
+ * \file   index.h
+ * \brief  learning CGAL examples
+ * 
+ * \author StoneHappy
+ * \date   January 2023
+ *********************************************************************/
 #pragma once
-int a_test_line_intersect();
+int predicates_and_constructions();
 
-int b_predicates_and_constructions();
+int surprising();
 
 int miniqtproject();

@@ -6,6 +6,12 @@
 typedef CGAL::Simple_cartesian<double>                       Kernel;
 typedef Kernel::Point_3                                      Point;
 typedef CGAL::Surface_mesh<Point>                            Mesh;
+
+/**
+ * \brief CGAL最简单Qt显示代码
+ * 
+ * \return 
+ */
 int miniqtproject()
 {
   const std::string filename = CGAL::data_file_path("meshes/elephant.off");

@@ -799,7 +799,7 @@ INPUT                  = @CMAKE_CURRENT_SOURCE_DIR@/src/ @CMAKE_CURRENT_SOURCE_D
 # possible encodings.
 # The default value is: UTF-8.
 
-INPUT_ENCODING         = UTF-8
+INPUT_ENCODING         = GB2312
 
 # If the value of the INPUT tag contains directories, you can use the
 # FILE_PATTERNS tag to specify one or more wildcard patterns (like *.cpp and

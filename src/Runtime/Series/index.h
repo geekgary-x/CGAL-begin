@@ -12,4 +12,6 @@ int surprising();
 
 int exact();
 
+int array_convex_hull_2();
+
 int miniqtproject();

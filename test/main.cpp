@@ -15,6 +15,12 @@ TEST(CGALBEGIN, exact)
 	exact();
 }
 
+TEST(CGALBEGIN, array_convex_hull_2)
+{
+	array_convex_hull_2();
+}
+
+
 TEST(CGALBEGIN, miniqtproject)
 {
 	miniqtproject();

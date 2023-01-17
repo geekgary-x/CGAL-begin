@@ -20,6 +20,10 @@ TEST(CGALBEGIN, array_convex_hull_2)
 	array_convex_hull_2();
 }
 
+TEST(CGALBEGIN, vector_convex_hull_2)
+{
+	vector_convex_hull_2();
+}
 
 TEST(CGALBEGIN, miniqtproject)
 {

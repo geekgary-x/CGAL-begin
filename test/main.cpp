@@ -25,6 +25,11 @@ TEST(CGALBEGIN, vector_convex_hull_2)
 	vector_convex_hull_2();
 }
 
+TEST(CGALBEGIN, kernel)
+{
+	kernel();
+}
+
 TEST(CGALBEGIN, miniqtproject)
 {
 	miniqtproject();

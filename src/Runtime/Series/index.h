@@ -16,4 +16,6 @@ int array_convex_hull_2();
 
 int vector_convex_hull_2();
 
+int kernel();
+
 int miniqtproject();

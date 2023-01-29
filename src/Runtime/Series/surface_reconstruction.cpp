@@ -5,11 +5,13 @@
 #include <CGAL/remove_outliers.h>
 #include <CGAL/compute_average_spacing.h>
 #include <CGAL/grid_simplify_point_set.h>
+#include <CGAL/jet_smooth_point_set.h>
 
 typedef CGAL::Exact_predicates_inexact_constructions_kernel Kernel;
 typedef Kernel::Point_3 Point_3;
 typedef Kernel::Vector_3 Vector_3;
 typedef CGAL::Point_set_3<Point_3, Vector_3> Point_set;
+
 
 int surface_reconstruction()
 {
@@ -42,6 +44,9 @@ int surface_reconstruction()
 
 	// 删除标记为remove的点云内存
 	points.collect_garbage();
+	std::ofstream out_points_remove_outliers("D:/MeshProcess/outputs/points_remove_outliers.ply", std::ios_base::binary);
+	out_points_remove_outliers << points;
+	out_points_remove_outliers.close();
 
 	// 计算点云与周围六个顶点的平均距离
 	double spacing = CGAL::compute_average_spacing<CGAL::Sequential_tag>(
@@ -53,4 +58,9 @@ int surface_reconstruction()
 	std::cout << points.number_of_removed_points()
 		<< " point(s) removed after simplification." << std::endl;
 	points.collect_garbage();
+
+	CGAL::jet_smooth_point_set<CGAL::Sequential_tag>(points, 24);
+	std::ofstream out_points_smooth("D:/MeshProcess/outputs/points_smooth.ply", std::ios_base::binary);
+	out_points_smooth << points;
+	out_points_smooth.close();
 }

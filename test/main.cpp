@@ -34,3 +34,8 @@ TEST(CGALBEGIN, miniqtproject)
 {
 	miniqtproject();
 }
+
+TEST(CGALBEGIN, surface_reconstruction)
+{
+	surface_reconstruction();
+}

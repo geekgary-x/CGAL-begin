@@ -19,3 +19,6 @@ int vector_convex_hull_2();
 int kernel();
 
 int miniqtproject();
+
+int surface_reconstruction();
+

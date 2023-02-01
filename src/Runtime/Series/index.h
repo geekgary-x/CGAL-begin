@@ -22,3 +22,6 @@ int miniqtproject();
 
 int surface_reconstruction();
 
+int intersection_2();
+
+int intersection_3();

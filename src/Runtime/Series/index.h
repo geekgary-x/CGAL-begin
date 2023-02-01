@@ -27,3 +27,5 @@ int intersection_2_L_L();
 int intersection_3_L_L();
 
 int intersection_3_L_T();
+
+int bonded();

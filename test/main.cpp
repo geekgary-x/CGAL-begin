@@ -54,3 +54,8 @@ TEST(CGALBEGIN, intersection_3_L_T)
 {
 	intersection_3_L_T();
 }
+
+TEST(CGALBEGIN, bonded)
+{
+	bonded();
+}

@@ -28,4 +28,6 @@ int intersection_3_L_L();
 
 int intersection_3_L_T();
 
+int intersection_trianglation();
+
 int bonded();

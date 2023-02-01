@@ -78,3 +78,68 @@ int intersection_3_L_T()
 	}
 	return 0;
 }
+
+#include <CGAL/Triangulation_3.h>
+typedef CGAL::Triangulation_3<Kernel>      Triangulation;
+typedef Triangulation::Finite_facets_iterator Finite_facets_iterator;
+typedef Kernel::Point_3 Point_3;
+typedef Kernel::Line_3 Line_3;
+typedef Kernel::Triangle_3 Triangle_3;
+typedef Kernel::Intersect_3 Intersect_3;
+
+int intersection_trianglation()
+{
+
+	Point_3 linea_b(0, 0, 0);
+	Point_3 linea_e(1, 1, 1);
+
+	Line_3 lina(linea_b, linea_e);
+
+
+	std::list<Point_3> L;
+	L.push_front(Point_3(0, 0, 0));
+	L.push_front(Point_3(1, 0, 0));
+	L.push_front(Point_3(0, 1, 0));
+	L.push_front(Point_3(0, 0, 1));
+
+	Triangulation T(L.begin(), L.end());
+
+	std::vector<Point_3> intersect_points;
+	for (Finite_facets_iterator fit = T.finite_facets_begin(); fit != T.finite_facets_end(); fit++)
+	{
+
+		Point_3 one = fit->first->vertex(T.vertex_triple_index(fit->second, 0))->point();
+		Point_3 two = fit->first->vertex(T.vertex_triple_index(fit->second, 1))->point();
+		Point_3 thr = fit->first->vertex(T.vertex_triple_index(fit->second, 2))->point();
+
+		Triangle_3 tri(one, two, thr);
+
+		CGAL::cpp11::result_of<Intersect_3(Line_3, Triangle_3)>::type result = intersection(lina, tri);
+		if (result)
+		{
+			const Point_3* p = boost::get<Point_3 >(&*result);
+
+			bool similiar = false;
+			for (size_t i = 0; i < intersect_points.size(); i++)
+			{
+				Point_3& point = intersect_points[i];
+				double distance = sqrt(pow(point.x() - p->x(), 2) +
+					pow(point.y() - p->y(), 2) +
+					pow(point.z() - p->z(), 2));
+
+				if (distance < 0.000001)
+					similiar = true;
+			}
+			if (!similiar)
+				intersect_points.push_back(*p);
+		}
+	}
+
+	std::cout << "Intersect Point Number: " << intersect_points.size() << std::endl;
+	for (size_t i = 0; i < intersect_points.size(); i++)
+	{
+		std::cout << intersect_points[i] << std::endl;
+	}
+
+	return 0;
+}

@@ -59,3 +59,8 @@ TEST(CGALBEGIN, bonded)
 {
 	bonded();
 }
+
+TEST(CGALBEGIN, intersection_trianglation)
+{
+	intersection_trianglation();
+}

@@ -30,4 +30,6 @@ int intersection_3_L_T();
 
 int intersection_trianglation();
 
+int random_point_2d_delaunay();
+
 int bonded();

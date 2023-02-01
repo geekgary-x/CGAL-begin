@@ -64,3 +64,8 @@ TEST(CGALBEGIN, intersection_trianglation)
 {
 	intersection_trianglation();
 }
+
+TEST(CGALBEGIN, random_point_2d_delaunay)
+{
+	random_point_2d_delaunay();
+}

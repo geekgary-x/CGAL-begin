@@ -32,4 +32,6 @@ int intersection_trianglation();
 
 int random_point_2d_delaunay();
 
+int random_polygon();
+
 int bonded();

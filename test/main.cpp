@@ -69,3 +69,8 @@ TEST(CGALBEGIN, random_point_2d_delaunay)
 {
 	random_point_2d_delaunay();
 }
+
+TEST(CGALBEGIN, random_polygon)
+{
+	random_polygon();
+}

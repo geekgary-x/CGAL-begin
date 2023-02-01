@@ -40,12 +40,17 @@ TEST(CGALBEGIN, surface_reconstruction)
 	surface_reconstruction();
 }
 
-TEST(CGALBEGIN, intersection_2)
+TEST(CGALBEGIN, intersection_2_L_L)
 {
-	intersection_2();
+	intersection_2_L_L();
 }
 
-TEST(CGALBEGIN, intersection_3)
+TEST(CGALBEGIN, intersection_3_L_L)
 {
-	intersection_3();
+	intersection_3_L_L();
+}
+
+TEST(CGALBEGIN, intersection_3_L_T)
+{
+	intersection_3_L_T();
 }

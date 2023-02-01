@@ -27,6 +27,7 @@ typedef CGAL::Point_set_3<Point_3, Vector_3> Point_set;
 
 int surface_reconstruction()
 {
+#if 0
 	//  ‰»Îµ„‘∆
 	Point_set points;
 
@@ -130,4 +131,6 @@ int surface_reconstruction()
 			f << "3 " << facet << std::endl;
 		f.close();
 	}
+#endif
+	return 0;
 }

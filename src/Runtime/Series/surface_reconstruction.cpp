@@ -27,11 +27,12 @@ typedef CGAL::Point_set_3<Point_3, Vector_3> Point_set;
 
 int surface_reconstruction()
 {
-#if 0
+#if 1
 	// 输入点云
 	Point_set points;
 
-	std::string fname = CGAL::data_file_path("points_3//kitten.xyz");
+	//std::string fname = CGAL::data_file_path("points_3//kitten.xyz");
+	std::string fname = "D:\\codes\\mesh_merge\\out\\bin\\Debug\\outPoints.ply";
 
 	std::ifstream stream(fname, std::ios::binary);
 
@@ -78,20 +79,20 @@ int surface_reconstruction()
 	out_points_smooth.close();
 
 	// Poisson重建
-	{
-		std::cout << "Begin Poisson reconstructing" << std::endl;
-		CGAL::jet_estimate_normals<CGAL::Sequential_tag>(points, 24);
-		typename Point_set::iterator unoriented_points_begin =
-			CGAL::mst_orient_normals(points, 24); // Use 24 neighbors
-		points.remove(unoriented_points_begin, points.end());
-		CGAL::Surface_mesh<Point_3> output_mesh;
-		CGAL::poisson_surface_reconstruction_delaunay(points.begin(), points.end(), points.point_map(), points.normal_map(), output_mesh, spacing);
-		std::ofstream f("D:/MeshProcess/outputs/out_poisson.ply", std::ios_base::binary);
-		CGAL::IO::set_binary_mode(f);
-		CGAL::IO::write_PLY(f, output_mesh);
-		f.close();
-		std::cout << "End Poisson reconstructing" << std::endl;
-	}
+	//{
+	//	std::cout << "Begin Poisson reconstructing" << std::endl;
+	//	CGAL::jet_estimate_normals<CGAL::Sequential_tag>(points, 24);
+	//	typename Point_set::iterator unoriented_points_begin =
+	//		CGAL::mst_orient_normals(points, 24); // Use 24 neighbors
+	//	points.remove(unoriented_points_begin, points.end());
+	//	CGAL::Surface_mesh<Point_3> output_mesh;
+	//	CGAL::poisson_surface_reconstruction_delaunay(points.begin(), points.end(), points.point_map(), points.normal_map(), output_mesh, spacing);
+	//	std::ofstream f("D:/MeshProcess/outputs/out_poisson.ply", std::ios_base::binary);
+	//	CGAL::IO::set_binary_mode(f);
+	//	CGAL::IO::write_PLY(f, output_mesh);
+	//	f.close();
+	//	std::cout << "End Poisson reconstructing" << std::endl;
+	//}
 
 	// Advancing front 重建
 	{
@@ -115,22 +116,22 @@ int surface_reconstruction()
 	}
 
 	// Scale space 重建
-	{
-		CGAL::Scale_space_surface_reconstruction_3<Kernel> reconstruct
-		(points.points().begin(), points.points().end());
-		// Smooth using 4 iterations of Jet Smoothing
-		reconstruct.increase_scale(4, CGAL::Scale_space_reconstruction_3::Jet_smoother<Kernel>());
-		// Mesh with the Advancing Front mesher with a maximum facet length of 0.5
-		reconstruct.reconstruct_surface(CGAL::Scale_space_reconstruction_3::Advancing_front_mesher<Kernel>(0.5));
-		std::ofstream f("D:/MeshProcess/outputs/out_sp.off");
-		f << "OFF" << std::endl << points.size() << " "
-			<< reconstruct.number_of_facets() << " 0" << std::endl;
-		for (Point_set::Index idx : points)
-			f << points.point(idx) << std::endl;
-		for (const auto& facet : CGAL::make_range(reconstruct.facets_begin(), reconstruct.facets_end()))
-			f << "3 " << facet << std::endl;
-		f.close();
-	}
+	//{
+	//	CGAL::Scale_space_surface_reconstruction_3<Kernel> reconstruct
+	//	(points.points().begin(), points.points().end());
+	//	// Smooth using 4 iterations of Jet Smoothing
+	//	reconstruct.increase_scale(4, CGAL::Scale_space_reconstruction_3::Jet_smoother<Kernel>());
+	//	// Mesh with the Advancing Front mesher with a maximum facet length of 0.5
+	//	reconstruct.reconstruct_surface(CGAL::Scale_space_reconstruction_3::Advancing_front_mesher<Kernel>(0.5));
+	//	std::ofstream f("D:/MeshProcess/outputs/out_sp.off");
+	//	f << "OFF" << std::endl << points.size() << " "
+	//		<< reconstruct.number_of_facets() << " 0" << std::endl;
+	//	for (Point_set::Index idx : points)
+	//		f << points.point(idx) << std::endl;
+	//	for (const auto& facet : CGAL::make_range(reconstruct.facets_begin(), reconstruct.facets_end()))
+	//		f << "3 " << facet << std::endl;
+	//	f.close();
+	//}
 #endif
 	return 0;
 }

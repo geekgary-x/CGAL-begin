@@ -53,6 +53,7 @@ find_package(Qt5 COMPONENTS
 
 find_package(CGAL REQUIRED)
 find_package(CGAL REQUIRED OPTIONAL_COMPONENTS Qt5)
+find_package (Eigen3 3.3 REQUIRED NO_MODULE)
 
 add_subdirectory(src)
 

@@ -16,5 +16,6 @@
     // "cmake.generator": "Ninja",
     "cmake.debugConfig": {
         "args": ["--gtest_filter=testCGAL.a_Line_Intersect"]
-    }
+    },
+    "liveServer.settings.port": 5501
 }

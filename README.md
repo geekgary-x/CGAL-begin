@@ -4,7 +4,7 @@
 ```bash
 # clone repository and submodule
 
-git clone --recursive https://github.com/StoneHappy/Qt-empty-project.git
+git clone --recursive https://github.com/StoneHappy/CGAL-begin.git
 
 # create buid dir
 

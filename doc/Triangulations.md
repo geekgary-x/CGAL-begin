@@ -32,3 +32,4 @@ $$
 * T中的单纯形的任意面都在T中
 * T中两个单纯形要么不相交，要么共享一条低纬边
 
+单纯复形的维度为单纯复形的单纯形的最大维度，即：$dim= max \begin{Bmatrix}dim\delta  \end{Bmatrix}$,其中$dim\delta$是单纯形的维度。

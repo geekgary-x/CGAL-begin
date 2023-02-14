@@ -6,3 +6,11 @@ namespace CGALBeginTests
 		int load();
 	}
 }
+
+namespace CGALBeginTests
+{
+	namespace Triangulations
+	{
+		int for_loop_2();
+	}
+}

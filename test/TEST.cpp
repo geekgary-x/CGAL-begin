@@ -2,5 +2,10 @@
 #include "index.h"
 TEST(SurfaceMesh, load)
 {
-	CGALBeginTests::SurfaceMesh::load();
+	EXPECT_NO_THROW(CGALBeginTests::SurfaceMesh::load());
+}
+
+TEST(Triangulations, for_loop_2)
+{
+	EXPECT_NO_THROW(CGALBeginTests::Triangulations::for_loop_2());
 }

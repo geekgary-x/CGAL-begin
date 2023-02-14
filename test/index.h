@@ -14,3 +14,11 @@ namespace CGALBeginTests
 		int for_loop_2();
 	}
 }
+
+namespace CGALBeginTests
+{
+	namespace Triangulations
+	{
+		int terrain();
+	}
+}

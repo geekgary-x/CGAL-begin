@@ -8,6 +8,7 @@ namespace CGALBeginTests
 		{
 			Surface_mesh mesh;
 			CGAL::Polygon_mesh_processing::IO::read_polygon_mesh(CGAL::data_file_path("meshes/elephant.off"), mesh);
+			return 0;
 		}
 	}
 }

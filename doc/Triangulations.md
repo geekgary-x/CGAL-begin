@@ -51,3 +51,6 @@ CGAL的二维三角剖分可以理解为一个基于有界三角形面并且三�
 
 ![Infinite vertex and infinite faces](imgs/Triangulations/image-20230214115730678.png)
 
+这可以也可以简单的处理低维退化问题，或者说当三角剖分顶点数少于三个顶点时，此时就是一个一维空间三角化，此时无穷面和线拓扑边构成了一个1维球。当只有一个顶点时，其面域简化一个顶点，引入两个拓扑无穷点此时构成了下右图的0维球。
+
+![Triangulations with zero, one, and two finite vertices](imgs/Triangulations/image-20230214135149246.png)
